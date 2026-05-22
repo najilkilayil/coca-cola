@@ -5,6 +5,144 @@
 }
 
 body {
-    height: 200vh;
+    height: 400vh;
     background-color: #090909;
+}
+
+/* Text Box */
+.text-div-main {
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+}
+
+.text-div-main-set {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    opacity: 1;
+}
+
+/* Small text p TEXT SET */
+.text-up-p {
+    color: red;
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+
+.text-mid-h1 {
+    color: green;
+    font-size: 70px;
+    line-height: 1;
+    margin: 10px 0;
+}
+
+.text-dw-p {
+    color: blue;
+    font-size: 16px;
+}
+
+/* Set 1 */
+.text-set1 {
+    animation: text1anim linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 120vh;
+}
+
+/* Set 2 */
+.text-set2 {
+    animation: text2anim linear forwards;
+    animation-timeline: scroll();
+    animation-range: 100vh 240vh;
+}
+
+/* Set 3 */
+.text-set3 {
+    animation: text3anim  linear forwards;
+    animation-timeline: scroll();
+    animation-range: 220vh 360vh;
+}
+
+/* ANIMATION SECTION */
+
+@keyframes text1anim {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+        filter: blur(15px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+        
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+        filter: blur(15px);
+        letter-spacing: 10px;   
+    }
+}
+
+@keyframes text2anim {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+        filter: blur(15px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+        
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+        filter: blur(15px);
+        letter-spacing: 10px;  
+    }
+}
+
+@keyframes text3anim {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+        filter: blur(15px);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+        
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+        filter: blur(15px);
+        letter-spacing: 10px;    
+    }
 }
