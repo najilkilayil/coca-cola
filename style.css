@@ -65,7 +65,7 @@ body {
 
 /* Set 3 */
 .text-set3 {
-    animation: text3anim  linear forwards;
+    animation: text3anim linear forwards;
     animation-timeline: scroll();
     animation-range: 220vh 360vh;
 }
@@ -82,11 +82,10 @@ body {
 }
 
 .coca-cola-main {
-    
     position: relative;
     width: 40%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     animation: Coca-opt-anim linear forwards;
     animation-timeline: scroll();
     animation-range: 0vh 10vh;
@@ -94,6 +93,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: end;
+    z-index: 10;
 }
 
 .coca-cola-main img {
@@ -105,7 +105,7 @@ body {
     opacity: 1;
     animation: normalcola linear forwards;
     animation-timeline: scroll();
-    animation-range: 15vh 150vh;
+    animation-range: 15vh 190vh;
 }
 
 .coca-cola-cold {
@@ -115,30 +115,186 @@ body {
     animation-range: 130vh 360vh;
 }
 
+/* Ice cube Texting for first time */
+.ice-cube {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ice-cube div {
+    position: absolute;
+    opacity: 0;
+    background: url(images/ice-cube.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Ice Cube LEFT SIDE */
+.ice-cube div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    margin-top: 65px;
+    transform: rotate(45deg);
+    animation: icelt1 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    margin-top: 150px;
+
+    animation: icelt2 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    margin-top: 200px;
+    transform: rotate(145deg);
+    z-index: 11;
+
+    animation: icelt3 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 260vh;
+}
+
+.ice-cube div:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    margin-top: 300px;
+    transform: rotate(400deg);
+
+    animation: icelt4 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    margin-top: 350px;
+    transform: rotate(280deg);
+    z-index: 11;
+
+    animation: icelt5 forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 260vh;
+
+}
+
+.ice-cube div:nth-child(6) {
+    width: 40px;
+    height: 40px;
+    margin-top: 400px;
+
+    animation: icelt6 forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+/* Ice on RIGHT SIDE */
+.ice-cube div:nth-child(7) {
+    width: 50px;
+    height: 50px;
+    margin-top: 65px;
+    transform: rotate(45deg);
+
+    animation: icert7 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(8) {
+    width: 40px;
+    height: 40px;
+    margin-top: 150px;
+    z-index: 11;
+
+    animation: icert8 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 260vh;
+}
+
+.ice-cube div:nth-child(9) {
+    width: 60px;
+    height: 60px;
+    margin-top: 200px;
+    transform: rotate(145deg);
+
+    animation: icert9 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    margin-top: 300px;
+    transform: rotate(400deg);
+    z-index: 11;
+
+    animation: icert10 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 260vh;
+}
+
+.ice-cube div:nth-child(11) {
+    width: 50px;
+    height: 50px;
+    margin-top: 350px;
+    transform: rotate(280deg);
+
+    animation: icert11 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
+.ice-cube div:nth-child(12) {
+    width: 40px;
+    height: 40px;
+    margin-top: 400px;
+
+    animation: icert12 linear forwards;
+    animation-timeline: scroll();
+    animation-range: 110vh 230vh;
+}
+
 /* ANIMATION SECTION */
 
+/* text */
 @keyframes text1anim {
     0% {
         opacity: 0;
         transform: translateY(60px);
         filter: blur(15px);
     }
+
     15% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
-        
+
     }
+
     70% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
     }
+
     100% {
         opacity: 0;
         transform: translateY(-60px);
         filter: blur(15px);
-        letter-spacing: 10px;   
+        letter-spacing: 10px;
     }
 }
 
@@ -148,22 +304,25 @@ body {
         transform: translateY(60px);
         filter: blur(15px);
     }
+
     15% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
-        
+
     }
+
     70% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
     }
+
     100% {
         opacity: 0;
         transform: translateY(-60px);
         filter: blur(15px);
-        letter-spacing: 10px;  
+        letter-spacing: 10px;
     }
 }
 
@@ -173,30 +332,34 @@ body {
         transform: translateY(60px);
         filter: blur(15px);
     }
+
     15% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
-        
+
     }
+
     70% {
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
     }
+
     100% {
         opacity: 0;
         transform: translateY(-60px);
         filter: blur(15px);
-        letter-spacing: 10px;    
+        letter-spacing: 10px;
     }
 }
 
+/* Coca Cola Bottle */
 @keyframes Coca-opt-anim {
     0% {
         opacity: 0;
     }
-    
+
     100% {
         opacity: 1;
     }
@@ -224,7 +387,215 @@ body {
     20% {
         opacity: 1;
     }
+
     100% {
         opacity: 1;
+    }
+}
+
+/* Ice cube */
+/* left side */
+@keyframes icelt1 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px) rotate(45deg);
+    }
+
+    99% {
+        opacity: 1;
+        transform: translateX(0) rotate(1500deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(1500deg);
+    }
+}
+
+@keyframes icelt2 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px);
+    }
+
+    74% {
+        opacity: 1;
+        transform: translateX(0) rotate(200deg);
+    }
+
+    75% {
+        transform: translateX(0) rotate(200deg);
+    }
+}
+
+@keyframes icelt3 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px);
+    }
+
+    79% {
+        opacity: 1;
+        transform: translateX(-100px) rotate(145deg);
+    }
+
+    80% {
+        transform: translateX(-100px) rotate(145deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(145deg);
+    }
+}
+
+@keyframes icelt4 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px);
+    }
+
+    89% {
+        opacity: 1;
+        transform: translateX(0) rotate(1200deg);
+    }
+
+    90% {
+        transform: translateX(0) rotate(1200deg);
+    }
+}
+
+@keyframes icelt5 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px);
+    }
+
+    79% {
+        opacity: 1;
+        transform: translateX(-50px) rotate(360deg);
+    }
+
+    80% {
+        transform: translateX(-50px) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(-50px) rotate(360deg);
+    }
+}
+
+@keyframes icelt6 {
+    0% {
+        opacity: 1;
+        transform: translateX(-1000px);
+    }
+
+    49% {
+        opacity: 1;
+        transform: translateX(0) rotate(3000deg);
+    }
+
+    50% {
+        transform: translateX(0) rotate(3000deg);
+    }
+}
+
+/* Right side */
+@keyframes icert7 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    79% {
+        transform: translateX(0) rotate(-200deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(0) rotate(-200deg);
+    }
+}
+
+@keyframes icert8 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    79% {
+        transform: translateX(60px) rotate(-1500deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(60px) rotate(-1500deg);
+    }
+
+    100% {
+        transform: translateX(60px) rotate(-1500deg);
+    }
+}
+
+@keyframes icert9 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    74% {
+        opacity: 1;
+        transform: translateX(0) rotate(-900deg);
+    }
+
+    75% {
+        transform: translateX(0) rotate(-900deg);
+    }
+}
+
+@keyframes icert10 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    99% {
+        transform: translateX(100px) rotate(-360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100px) rotate(-360deg);
+    }
+}
+
+@keyframes icert11 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    49% {
+        transform: translateX(0) rotate(-3000deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(0) rotate(-3000deg);
+    }
+}
+
+@keyframes icert12 {
+    0% {
+        opacity: 1;
+        transform: translateX(1000px);
+    }
+
+    99% {
+        transform: translateX(0) rotate(-360deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0) rotate(-360deg);
     }
 }
