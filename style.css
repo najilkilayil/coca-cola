@@ -70,6 +70,28 @@ body {
     animation-range: 220vh 360vh;
 }
 
+
+/* Coca Cola */
+.coca-cola-main {
+    width: 100%;
+    background-color: aqua;
+    height: 70vh;
+    margin-top: 200px;
+    position: fixed;
+
+    opacity: 1;
+    animation: Coca-opt-anim linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 10vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
 /* ANIMATION SECTION */
 
 @keyframes text1anim {
@@ -146,3 +168,13 @@ body {
         letter-spacing: 10px;    
     }
 }
+
+@keyframes Coca-opt-anim {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
